@@ -11,3 +11,7 @@ web-build/
 
 # macOS
 .DS_Store
+
+# personal preference
+.expo-shared/
+.vscode/
