@@ -1,11 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View, Platform, StatusBar as SB } from "react-native";
+import Home from "./app/components/Home";
+import colours from "./app/config/colours";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Merlin</Text>
+      <Home />
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +16,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? SB.currentHeight : 0,
+    backgroundColor: colours.light,
   },
 });
