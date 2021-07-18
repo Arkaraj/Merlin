@@ -46,17 +46,21 @@ const Home = () => {
             </Pressable>
           </View>
         </View>
-        <View>
-          <Text>Drop Down Languages</Text>
+        <View style={styles.content}>
+          <View>
+            <Text>Drop Down Languages</Text>
+          </View>
+          <View>
+            <TouchableOpacity
+              onPress={() => {
+                console.log("Pressed Play button");
+              }}
+              style={styles.primaryButton}
+            >
+              <Text style={styles.primaryButtonText}>Play</Text>
+            </TouchableOpacity>
+          </View>
         </View>
-        <TouchableOpacity
-          onPress={() => {
-            console.log("Pressed Play button");
-          }}
-          style={styles.primaryButton}
-        >
-          <Text style={styles.primaryButtonText}>Play</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -80,14 +84,22 @@ const styles = StyleSheet.create({
     ],
     paddingHorizontal: 20,
     zIndex: 3,
+    flexDirection: "column",
   },
   card: {
     flex: 1,
     backgroundColor: colours.black,
     borderRadius: 15,
     marginVertical: 20,
-
     flexDirection: "row",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 4,
+      height: 4,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   image: {
     flex: 1,
@@ -96,7 +108,6 @@ const styles = StyleSheet.create({
   },
   cardLeft: {
     flex: 1,
-    // marginLeft: 15,
   },
   cardRight: {
     flex: 1,
@@ -114,15 +125,24 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   heading: {
-    flex: 1,
+    flex: 2,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     marginVertical: 20,
   },
   boldText: {
     fontSize: 18,
     fontWeight: "bold",
+  },
+  content: {
+    // Not working
+    flex: 3,
+    flexDirection: "column",
+    textAlign: "center",
+    justifyContent: "space-between",
+    marginHorizontal: 10,
+    marginTop: "30%",
   },
   pressable: {
     backgroundColor: "#D0F1F8",
