@@ -4,8 +4,9 @@ export default {
   white: "#FFFFFF",
   black: "#000000",
   light: "#ECF3F7",
-  dark: "#10132D",
+  dark: "#141735",
   grey: "#3E3E3E",
   correct: "#1ACA98",
   wrong: "#770037",
+  greyBorderColour: "#383D5B",
 };

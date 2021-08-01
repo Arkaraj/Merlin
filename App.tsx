@@ -14,8 +14,8 @@ import colours from "./app/config/colours";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Home />
-      {/* <Quiz /> */}
+      {/* <Home /> */}
+      <Quiz />
     </View>
   );
 }
